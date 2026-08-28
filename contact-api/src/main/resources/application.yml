@@ -1,0 +1,42 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  application:
+    name: insigniadigital-contact-api
+  mail:
+    host: ${SMTP_HOST}
+    port: ${SMTP_PORT:587}
+    username: ${SMTP_USERNAME}
+    password: ${SMTP_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.connectiontimeout: 10000
+      mail.smtp.timeout: 10000
+      mail.smtp.writetimeout: 10000
+
+contact:
+  recipient: ${CONTACT_RECIPIENT:atencion@insigniadigital.com.mx}
+  sender: ${CONTACT_SENDER:${SMTP_USERNAME}}
+  rate-limit-attempts: ${CONTACT_RATE_LIMIT_ATTEMPTS:5}
+  rate-limit-window: ${CONTACT_RATE_LIMIT_WINDOW:PT10M}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+  health:
+    mail:
+      enabled: false
+
+logging:
+  level:
+    root: INFO
+    mx.com.insigniadigital.contact: INFO

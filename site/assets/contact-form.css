@@ -1,0 +1,24 @@
+.insignia-contact-status {
+    margin: 14px 0 0;
+    max-width: 680px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.insignia-contact-status[hidden] {
+    display: none;
+}
+
+.insignia-contact-status[data-state="pending"] {
+    color: #2b4356;
+}
+
+.insignia-contact-status[data-state="success"] {
+    color: #176b3a;
+    font-weight: 600;
+}
+
+.insignia-contact-status[data-state="error"] {
+    color: #9c1c1c;
+    font-weight: 600;
+}

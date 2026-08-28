@@ -1,0 +1,17 @@
+spring:
+  mail:
+    host: smtp.invalid
+    port: 587
+    username: atencion@insigniadigital.com.mx
+    password: test-only
+
+contact:
+  recipient: atencion@insigniadigital.com.mx
+  sender: atencion@insigniadigital.com.mx
+  rate-limit-attempts: 5
+  rate-limit-window: PT10M
+
+management:
+  health:
+    mail:
+      enabled: false
