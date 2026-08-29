@@ -5,4 +5,13 @@
 *.iml
 
 .env
+.env.*
+.env-*
+!.env.example
+*.log
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
 contact-api/target/

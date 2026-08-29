@@ -11,9 +11,11 @@ site/          Export estático saneado y recursos propios del formulario.
 contact-api/   API Spring Boot 3.5.16 / Java 21 para entrega por SMTP.
 ```
 
-No contiene WordPress ejecutable, PHP, base de datos, Docker, Nginx ni
-credenciales. El estado interno de JetBackup y los plugins de respaldo sin uso
-fueron excluidos antes de incorporar el export.
+No contiene WordPress ejecutable, PHP, base de datos, Compose, Nginx ni
+credenciales. El `Dockerfile` de `contact-api` vive junto al código porque define
+cómo se construye su artefacto; la operación del stack permanece separada en
+`../insigniadigital-docker`. El estado interno de JetBackup y los plugins de
+respaldo sin uso fueron excluidos antes de incorporar el export.
 
 ## Formulario
 
